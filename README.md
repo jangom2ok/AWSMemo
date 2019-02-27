@@ -27,3 +27,4 @@ AWSを調べている中で疑問に思った内容や用語解説メモなど
 
 [AWS CLI Ubuntuへのインストール](https://qiita.com/yuyj109/items/3163a84480da4c8f402c)
 
+[お名前.comのドメインをAWSで使用する4つの方法](https://qiita.com/sadayuki-matsuno/items/4c371ba984d9b22b3737)
