@@ -19,16 +19,16 @@ mysql:
     - 3306:3306
   tty: true
 
-mysql_data:
-  container_name: mysql_data
-  image: busybox
-  volumes:
-    - "/home/ec2-user/mysql:/var/lib/mysql"
-  tty: true
-
 httpd_data:
   container_name: httpd_data
   image: busybox
   volumes:
     - "/home/ec2-user/httpd:/var/www/html"
+  tty: true
+
+mysql_data:
+  container_name: mysql_data
+  image: busybox
+  volumes:
+    - "/home/ec2-user/mysql:/var/lib/mysql"
   tty: true
