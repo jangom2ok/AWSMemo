@@ -170,7 +170,7 @@ Resources:
     Type: "AWS::ElasticLoadBalancingV2::LoadBalancer"
     Properties:
       Type: 'application'
-      Name: 'talkie-infra-ALB'
+      Name: 'Basic-infra-ALB'
       SecurityGroups: [!Ref cfnALBSecurityGroup]
       IpAddressType: 'ipv4'
       Scheme: 'internet-facing'
@@ -184,7 +184,7 @@ Resources:
   cfnTargetGroup:
     Type: "AWS::ElasticLoadBalancingV2::TargetGroup"
     Properties:
-      Name: 'talkie-infra-TargetGroup'
+      Name: 'Basic-infra-TargetGroup'
       VpcId: !Ref cfnVpc
       Port: 80
       Protocol: HTTP
