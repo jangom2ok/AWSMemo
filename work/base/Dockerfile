@@ -10,6 +10,9 @@ RUN yum -y update; yum clean all; \
     rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm; \
     yum -y install --enablerepo=remi,remi-php56 php php-devel php-mbstring php-pdo php-gd php-xml php-mcrypt libjpeg-devel libpng-devel libXpm-devel freetype-devel
 
+COPY httpd.conf
+COPY php.ini
+
 EXPOSE 80
 
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
