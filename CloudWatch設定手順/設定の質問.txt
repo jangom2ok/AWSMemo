@@ -1,0 +1,62 @@
+3/4/2019時点におけるCloudWatch設定ウィザードの質問一覧
+
+On which OS are you planning to use the agent?
+使用するOSはWindowsかLinuxか
+
+Trying to fetch the default region based on ec2 metadata...
+監視対象はオンプレミスかEC2か
+
+Do you want to turn on StatsD daemon?
+データ収集用のデーモンの有効化
+
+Which port do you want StatsD daemon to listen to?
+StatsDのポート番号の指定
+
+What is the collect interval for StatsD daemon?
+収集用のデーモンの収集間隔
+
+What is the aggregation interval for metrics collected by StatsD daemon?
+収集したデーモンの集約間隔
+
+Do you want to monitor metrics from CollectD?
+CollectDとは、SNMP等を使用せずに単体で動作する、サーバの統計情報を収集するためのオープンソースソフトウェア、導入していない場合はインストールする
+
+Do you want to monitor any host metrics? e.g. CPU, memory, etc.
+CPUやメモリも監視対象とするか
+
+Do you want to monitor cpu metrics per core? Additional CloudWatch charges may apply.
+CPUはコア毎に監視対象とするか。（設定した場合追加の料金がかかります。）
+
+Do you want to add ec2 dimensions (ImageId, InstanceId, InstanceType, AutoScalingGroupName) into all of your metrics if the info is available?
+ディメンションを利用するかどうか
+
+Would you like to collect your metrics at high resolution (sub-minute resolution)? This enables sub-minute resolution for all metrics, but you can customize for specific metrics in the output json file.
+何秒単位でメトリクスを収集するか
+
+Which default metrics config do you want?
+監視タイプの選択、ベーシック、スタンダード、アドバンスドでそれぞれ監視できる内容が変わります。
+
+Are you satisfied with the above config? Note: it can be manually customized after the wizard completes to add additional items.
+出力された内容が正しいかどうか
+
+Do you have any existing CloudWatch Log Agent
+ログエージェントを使用するかどうか（今回は使用していない）
+
+Do you want to monitor any log files?
+ログの監視を行うかどうか（今回は使用していない）
+
+Please check the above content of the config.
+The config file is also located at /opt/aws/amazon-cloudwatch-agent/bin/config.json.
+Edit it manually if needed.
+Do you want to store the config in the SSM parameter store?
+コンフィグファイルをパラメータストアに保存するかどうか
+
+What parameter store name do you want to use to store your config?
+パラメータストアで利用する名前
+
+Trying to fetch the default region based on ec2 metadata...
+Which region do you want to store the config in the parameter store?
+アクティベーションを作成したリージョンを指定
+
+Which AWS credential should be used to send json config to parameter store?
+どのユーザを使用してコンフィグファイルをパラメータストアに送信するか
