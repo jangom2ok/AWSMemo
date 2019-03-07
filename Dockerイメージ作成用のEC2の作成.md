@@ -13,7 +13,13 @@
 ### EC2を作成する
 aws linux を選択
 
+### AWS CLI による EC2の起動と停止
+
+
 ### EC2に接続
+```
+ssh -i key.pem
+```
 
 ### yum のアップデート
 
