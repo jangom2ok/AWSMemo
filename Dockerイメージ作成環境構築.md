@@ -40,19 +40,17 @@ Registry: https://index.docker.io/v1/
 
 ### docker-compose のインストール
 
-docker-domposeのインストール（
-
-### 最新バージョンを確認し、サイトに書いているコマンドを実行
+#### 最新バージョンを確認し、サイトに書いているコマンドを実行
 [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
 
 ```
 sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 
-### docker-composeの実行権限を与える
+#### docker-composeの実行権限を与える
 ```
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-### 確認
+#### 確認
 docker-compose --version
