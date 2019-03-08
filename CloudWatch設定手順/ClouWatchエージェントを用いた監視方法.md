@@ -5,10 +5,13 @@
 - ロールにアタッチするポリシーは`AmazonEC2RoleforSSM`と`CloudWatchAgentAdminPolicy`の２つである。
 
 ### ssmエージェントのインストール
-1. - `mkdir /tmp/ssm`<br>
-   - `yum install https://s3.ap-northeast-1.amazonaws.com/amazon-ssm-ap-northeast-1/latest/linux_amd64/amazon-ssm-agent.rpm`
-   - `sudo status amazon-ssm-agent`
-   - 上記コマンドを実行しエージェントをインストールする。
+
+```
+mkdir /tmp/ssm
+yum install https://s3.ap-northeast-1.amazonaws.com/amazon-ssm-ap-northeast-1/latest/linux_amd64/amazon-ssm-agent.rpm
+sudo status amazon-ssm-agent
+```
+上記コマンドを実行しエージェントをインストールする。
 
 ### CloudWatchエージェントのインストール
 1. AWSコンソールから、AWS SystemManagerを選択する。
@@ -16,7 +19,6 @@
 1. 検索フィールドに[ドキュメント名のプレフィックス] [等しい] [AWS-ConfigureAWSPackage]と入力し、表示された**AWS-ConfigureAWSPackage**にチェックを入れる。
 1. ターゲットは［インスタンスの手動選択］で監視対象にチェックを入れる。
 1. コマンドのパラメータで以下を設定する。
-  - Action : Install
   - Name : AmazonCloudWatchAgent
   - Version : latest
 1. その他の設定は特に触らず、実行を選択する。

@@ -41,3 +41,18 @@ secret_key                <not set>             None    None
 ```
 sudo pip install -U awscli
 ```
+### プロファイル切り替えて使う場合は、アカウント毎にプロファイルを作成
+
+```
+aws configure --profile profile_name
+```
+
+cliを実行する毎にプロファイルを指定する
+
+```
+aws s3 list --profile profile_name
+```
+もしくは
+```
+export AWS_REGION=profile_name
+```
