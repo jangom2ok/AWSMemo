@@ -10,6 +10,8 @@ Dockerイメージ作成環境(EC2)にて、work以下のファイルをコピ�
 work/base/Dockerfile
 ```
 
+Dockerfileの詳細は 基礎となるDockerイメージの作成.md を参照
+
 ### ビルド
 work/base ディレクトリで次のコマンドを実行します。
 
