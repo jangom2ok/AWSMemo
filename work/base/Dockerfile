@@ -21,6 +21,6 @@ COPY functions /etc/rc.d/init.d/
 COPY httpd.conf
 COPY php.ini
 
-
 EXPOSE 80
+
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
