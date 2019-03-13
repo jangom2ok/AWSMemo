@@ -18,8 +18,8 @@ RUN yum -y update; yum clean all; \
 
 COPY functions /etc/rc.d/init.d/
 
-COPY httpd.conf
-COPY php.ini
+COPY ./httpd.conf /etc/httpd/conf/httpd.conf
+COPY ./php.ini /etc/php.ini
 
 EXPOSE 80
 
