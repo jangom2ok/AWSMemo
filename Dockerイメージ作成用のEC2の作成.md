@@ -35,9 +35,12 @@ aws ec2 wait instance-running --instance-ids "i-xxxxxxxxxxxxxxxxx"; echo "next c
 aws ec2 stop-instances --instance-ids "i-xxxxxxxxxxxxxxxxx"
 ```
 
-### EC2に接続
+### EC2に接続と切断
+セキュリティグループへSSHの接続を許可し、SSH終了後はセキュリティグループから設定を削除しておく
 ```
-ssh -i key.pem
+aws ec2 authorize-security-group-ingress --group-id $MYSECURITYGROUP --protocol tcp --port 22 --cidr $MYIP/32
+ssh -i key.pem user@server
+aws ec2 revoke-security-group-ingress --group-id $MYSECURITYGROUP --protocol tcp --port 22 --cidr $MYIP/32
 ```
 
 ### yum のアップデート
