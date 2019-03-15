@@ -1,6 +1,6 @@
 httpd:
   container_name: httpd
-  image: test:latest
+  image: httpd:latest
   volumes_from:
     - httpd_data
   ports:
@@ -23,7 +23,7 @@ httpd_data:
   container_name: httpd_data
   image: busybox
   volumes:
-    - "/home/ec2-user/httpd:/var/www/html"
+    - "/home/ec2-user/work:/work"
   tty: true
 
 mysql_data:
