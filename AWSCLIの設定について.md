@@ -54,5 +54,5 @@ aws s3 list --profile profile_name
 ```
 もしくは
 ```
-export AWS_REGION=profile_name
+export AWS_DEFAULT_PROFILE=profile_name
 ```
