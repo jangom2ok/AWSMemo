@@ -18,6 +18,7 @@
     1. AWS_REGION (リージョン)
     1. AWS_ECR_ACCOUNT_URL (ECRリポジトリのアカウントURL。xxxxxxx.xxx.ecr.ap-northeast-1.amazonaws.com の部分)
     1. ECR_REPO (リポジトリ名)
+    1. REPO_TAG (タグ名)
 
 ##### Dockerfileについて
 - gitプロジェクト内にDockerfileを置いておくこと。無い場合はエラーが出ます。
@@ -35,7 +36,7 @@
                 - aws-ecr/build-and-push-image:
                     name: 'build-test'
                     repo: '${ECR_REPO}'
-                    tag: pushtest
+                    tag: '${REPO_TAG}'
       ```
 1. gitリポジトリにDockerfileを配置する。(このDockerfileからビルドされたイメージがpushされる。)
 1. 環境変数の設定を終えた後、gitリポジトリにコミットを行う。
@@ -65,3 +66,8 @@
   - `name` circleCIに表示されるjob名
   - `repo` リポジトリ名(環境変数を使用)
   - `tag` pushしたイメージにつけられるタグ名
+
+##### ECR上のイメージをpullする
+1. 環境変数`ECR_REPO`を使用するイメージの存在するリポジトリに変更する。
+1. Dockerfileに使用するイメージを記述する。
+- 今回のorbsを使用したビルドの場合、jobがECRログイン->Dockerイメージをビルドする順番なので特に意識することなくリポジトリ上のイメージを使用することが出来た。
