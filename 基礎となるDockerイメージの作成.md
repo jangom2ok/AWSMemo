@@ -22,6 +22,8 @@ docker run [イメージ] cat /etc/httpd/conf/httpd.conf > httpd.conf
 - webuser のホームディレクトリに Apache の DocumentRoot を設定する
 - ログローテイションを有効にする
 - その他使用していないオプションを削除
+- ServerSignature Off
+- ServerTokens Prod
 
 #### php.ini の設定
 - メモリ使用量を増加

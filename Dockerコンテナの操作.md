@@ -2,7 +2,8 @@
 
 ### 実行
 ```
-docker run -i -t --name httpd イメージ
+docker run -i -t --name httpd イメージID
+docker run -d -i -t -p 80:80 --name httpd イメージID
 ```
 
 ### 停止
