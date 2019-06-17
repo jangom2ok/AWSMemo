@@ -3,6 +3,12 @@
 ### コンソールにて
 AWS Access Key と AWS Secret Access Key を作成する
 
+### pip インストール
+
+```
+curl -kL https://bootstrap.pypa.io/get-pip.py | python3.6
+```
+
 ### Linuxへのインストール
 ```
 sudo pip install awscli
